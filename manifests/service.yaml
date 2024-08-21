@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testwork
+  namespace: namespace-workflow-1724210774024
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: testwork
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
